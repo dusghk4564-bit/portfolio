@@ -1,0 +1,1097 @@
+<<<<<<< HEAD
+@import url('https://fonts.googleapis.com/earlyaccess/nanummyeongjo.css');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background: #000;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #000;
+    color: #f5f5f5;
+    font-family: "Nanum Myeongjo", "Malgun Gothic", serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 5px;
+}
+
+.portfolio {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    overflow: hidden;
+    background: #000;
+}
+
+.hero {
+    position: relative;
+    display: flex;
+    min-height: 620px;
+    height: 100svh;
+    max-height: 1000px;
+    align-items: flex-end;
+    isolation: isolate;
+}
+
+.hero::after {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: linear-gradient(180deg, rgb(0 0 0 / 15%) 20%, rgb(0 0 0 / 55%) 100%);
+    content: "";
+}
+
+.hero-image {
+    position: absolute;
+    z-index: -2;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 42%;
+}
+
+.header {
+    position: fixed;
+    z-index: 20;
+    inset: 0 0 auto;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px max(40px, calc((100% - 1360px) / 2));
+    background: rgb(0 0 0 / 36%);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.logo img {
+    display: block;
+    width: 200px;
+    height: auto;
+    filter: brightness(0) invert(1);
+}
+
+.nav {
+    display: flex;
+    gap: 34px;
+}
+
+.nav a {
+    color: #f1f1f1;
+    font-size: 18px;
+    transition: opacity .2s ease;
+}
+
+.nav a:hover {
+    opacity: .65;
+}
+
+.hero-title {
+    margin: 0 0 7% max(calc((100% - 1360px) / 2), 7%);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(82px, 10vw, 148px);
+    font-weight: 400;
+    letter-spacing: -.075em;
+    line-height: .83;
+}
+
+.hero-title span {
+    display: block;
+    margin-top: 8px;
+}
+
+.about {
+    padding: clamp(88px, 10vw, 144px) 0;
+    background: #090909;
+    scroll-margin-top: 88px;
+}
+
+.about-inner {
+    display: grid;
+    width: min(1200px, calc(100% - 80px));
+    align-items: start;
+    grid-template-columns: minmax(260px, .8fr) minmax(0, 1.2fr);
+    gap: clamp(48px, 10vw, 140px);
+    margin: 0 auto;
+}
+
+.about-profile {
+    width: 100%;
+}
+
+.about-photo {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1;
+    padding: 16%;
+    background: #f0f0ed;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.profile-caption {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin: 18px 4px 0;
+    color: #aaa;
+    font-size: 15px;
+}
+
+.profile-caption strong {
+    color: #eee;
+    font-weight: 400;
+}
+
+.about-copy {
+    width: 100%;
+    padding-top: 8px;
+}
+
+.about-title {
+    margin: 0 0 22px;
+    color: #ddd;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: .08em;
+}
+
+.experience-list {
+    display: grid;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    color: #aaa;
+    font-size: 15px;
+    line-height: 1.8;
+    list-style: none;
+}
+
+.skill-section {
+    margin-top: 48px;
+}
+
+.skills {
+    display: grid;
+    width: 100%;
+    gap: 14px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.skill-item {
+    display: grid;
+    grid-template-columns: 36px minmax(120px, 180px) minmax(0, 1fr);
+    align-items: center;
+    gap: 16px;
+    color: #d6d6d6;
+    font-size: 14px;
+}
+
+.skill-icon {
+    display: block;
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.skill-track {
+    display: block;
+    height: 7px;
+    overflow: hidden;
+    border: 1px solid #777;
+    border-radius: 999px;
+}
+
+.skill-level {
+    display: block;
+    width: var(--skill-level);
+    height: 100%;
+    background: #eee;
+}
+
+.skill-name {
+    color: #aaa;
+    line-height: 1.4;
+}
+
+.work {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 0;
+    scroll-margin-top: 88px;
+}
+
+.work-title {
+    margin: 0 0 30px;
+    text-align: center;
+    font-family: Georgia, serif;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.project-grid {
+    display: grid;
+    width: min(1400px, 90%);
+    grid-template-columns: repeat(3, 30%);
+    gap: 2rem;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.project {
+    display: block;
+    min-width: 0;
+    padding: 0;
+    border: 0;
+    color: inherit;
+    background: transparent;
+    text-align: left;
+    font: inherit;
+    cursor: pointer;
+}
+
+.project img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: filter .35s ease, transform .35s ease;
+}
+
+.project:hover img {
+    filter: brightness(.82);
+    transform: scale(.99);
+}
+
+.project:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 6px;
+}
+
+.project-caption {
+    display: block;
+    margin-top: 16px;
+    color: #aaa;
+    font-size: 12px;
+    letter-spacing: .12em;
+}
+
+.contact {
+    display: grid;
+    width: min(1200px, calc(100% - 80px));
+    align-items: center;
+    grid-template-columns: 1fr minmax(280px, 420px);
+    gap: clamp(40px, 8vw, 120px);
+    margin: 0 auto;
+    padding: clamp(72px, 9vw, 120px) 0;
+    border-top: 1px solid #333;
+    scroll-margin-top: 88px;
+}
+
+.contact-eyebrow {
+    margin: 0 0 20px;
+    color: #aaa;
+    font-size: 13px;
+    letter-spacing: .14em;
+}
+
+.contact-copy h2 {
+    max-width: 520px;
+    margin: 0;
+    font-size: clamp(30px, 4vw, 48px);
+    font-weight: 400;
+    line-height: 1.35;
+    word-break: keep-all;
+}
+
+.contact-details {
+    display: grid;
+    gap: 14px;
+}
+
+.contact-email {
+    margin-bottom: 12px;
+    color: #ccc;
+    font-family: Georgia, serif;
+    font-size: 20px;
+}
+
+.contact-link {
+    display: flex;
+    min-height: 46px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #d9d9d9;
+    color: #111;
+    background: #f2f2f2;
+    font-size: 11px;
+    letter-spacing: .08em;
+    transition: color .2s ease, background .2s ease;
+}
+
+.contact-link:hover {
+    color: #fff;
+    background: #333;
+}
+
+.footer {
+    display: flex;
+    width: min(1200px, calc(100% - 80px));
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 22px 0 30px;
+    border-top: 1px solid #222;
+    color: #777;
+    font-size: 11px;
+    letter-spacing: .08em;
+}
+
+.footer a {
+    color: #aaa;
+}
+
+.project-modal {
+    width: fit-content;
+    max-width: min(1000px, calc(100vw - 40px));
+    max-height: min(90vh, 1000px);
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    border: 1px solid #333;
+    border-radius: 14px;
+    color: #f5f5f5;
+    background: #090909;
+}
+
+.project-modal::backdrop {
+    background: rgb(0 0 0 / 82%);
+    backdrop-filter: blur(5px);
+}
+
+.project-modal-header {
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    display: flex;
+    min-height: 64px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    border-bottom: 1px solid #333;
+    background: rgb(9 9 9 / 94%);
+}
+
+.project-modal-header h2 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .12em;
+}
+
+.project-modal-close {
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    border: 1px solid #666;
+    color: #fff;
+    background: transparent;
+    font: inherit;
+    font-size: 26px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.project-modal-close:hover {
+    color: #111;
+    background: #fff;
+}
+
+.project-modal-image {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+@media (max-width: 800px) {
+    .hero {
+        min-height: 580px;
+        height: 88svh;
+    }
+
+    .header {
+        padding: 14px 20px;
+    }
+
+    .logo img {
+        width: 150px;
+    }
+
+    .nav {
+        gap: 16px;
+    }
+
+    .nav a {
+        font-size: 13px;
+    }
+
+    .hero-title {
+        margin: 0 0 12% 7%;
+        font-size: clamp(72px, 14vw, 108px);
+    }
+
+    .about-inner {
+        width: calc(100% - 48px);
+        grid-template-columns: minmax(0, 1fr);
+        gap: 40px;
+    }
+
+    .about-profile {
+        width: min(100%, 420px);
+    }
+
+    .skill-item {
+        grid-template-columns: 34px minmax(100px, 180px) minmax(0, 1fr);
+        gap: 12px;
+    }
+
+    .project-grid {
+        width: calc(100% - 48px);
+        grid-template-columns: minmax(0, 1fr);
+        gap: 2rem;
+        padding: 1rem 0;
+    }
+
+    .contact {
+        width: calc(100% - 48px);
+        grid-template-columns: minmax(0, 1fr);
+        gap: 36px;
+    }
+
+    .footer {
+        width: calc(100% - 48px);
+    }
+}
+
+@media (max-width: 520px) {
+    .header {
+        align-items: flex-start;
+    }
+
+    .logo img {
+        width: 120px;
+    }
+
+    .nav {
+        gap: 12px;
+    }
+
+    .nav a {
+        font-size: 11px;
+    }
+
+    .project-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .skill-item {
+        grid-template-columns: 32px minmax(0, 1fr);
+    }
+
+    .skill-track {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .skill-name {
+        grid-column: 2;
+        grid-row: 1;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+    }
+}
+=======
+@import url('https://fonts.googleapis.com/earlyaccess/nanummyeongjo.css');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background: #000;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #000;
+    color: #f5f5f5;
+    font-family: "Nanum Myeongjo", "Malgun Gothic", serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 5px;
+}
+
+.portfolio {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    overflow: hidden;
+    background: #000;
+}
+
+.hero {
+    position: relative;
+    display: flex;
+    min-height: 620px;
+    height: 100svh;
+    max-height: 1000px;
+    align-items: flex-end;
+    isolation: isolate;
+}
+
+.hero::after {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: linear-gradient(180deg, rgb(0 0 0 / 15%) 20%, rgb(0 0 0 / 55%) 100%);
+    content: "";
+}
+
+.hero-image {
+    position: absolute;
+    z-index: -2;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 42%;
+}
+
+.header {
+    position: fixed;
+    z-index: 20;
+    inset: 0 0 auto;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px max(40px, calc((100% - 1360px) / 2));
+    background: rgb(0 0 0 / 36%);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.logo img {
+    display: block;
+    width: 200px;
+    height: auto;
+    filter: brightness(0) invert(1);
+}
+
+.nav {
+    display: flex;
+    gap: 34px;
+}
+
+.nav a {
+    color: #f1f1f1;
+    font-size: 18px;
+    transition: opacity .2s ease;
+}
+
+.nav a:hover {
+    opacity: .65;
+}
+
+.hero-title {
+    margin: 0 0 7% max(calc((100% - 1360px) / 2), 7%);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(82px, 10vw, 148px);
+    font-weight: 400;
+    letter-spacing: -.075em;
+    line-height: .83;
+}
+
+.hero-title span {
+    display: block;
+    margin-top: 8px;
+}
+
+.about {
+    padding: clamp(88px, 10vw, 144px) 0;
+    background: #090909;
+    scroll-margin-top: 88px;
+}
+
+.about-inner {
+    display: grid;
+    width: min(1200px, calc(100% - 80px));
+    align-items: start;
+    grid-template-columns: minmax(260px, .8fr) minmax(0, 1.2fr);
+    gap: clamp(48px, 10vw, 140px);
+    margin: 0 auto;
+}
+
+.about-profile {
+    width: 100%;
+}
+
+.about-photo {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1;
+    padding: 16%;
+    background: #f0f0ed;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.profile-caption {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin: 18px 4px 0;
+    color: #aaa;
+    font-size: 15px;
+}
+
+.profile-caption strong {
+    color: #eee;
+    font-weight: 400;
+}
+
+.about-copy {
+    width: 100%;
+    padding-top: 8px;
+}
+
+.about-title {
+    margin: 0 0 22px;
+    color: #ddd;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: .08em;
+}
+
+.experience-list {
+    display: grid;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    color: #aaa;
+    font-size: 15px;
+    line-height: 1.8;
+    list-style: none;
+}
+
+.skill-section {
+    margin-top: 48px;
+}
+
+.skills {
+    display: grid;
+    width: 100%;
+    gap: 14px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.skill-item {
+    display: grid;
+    grid-template-columns: 36px minmax(120px, 180px) minmax(0, 1fr);
+    align-items: center;
+    gap: 16px;
+    color: #d6d6d6;
+    font-size: 14px;
+}
+
+.skill-icon {
+    display: block;
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.skill-track {
+    display: block;
+    height: 7px;
+    overflow: hidden;
+    border: 1px solid #777;
+    border-radius: 999px;
+}
+
+.skill-level {
+    display: block;
+    width: var(--skill-level);
+    height: 100%;
+    background: #eee;
+}
+
+.skill-name {
+    color: #aaa;
+    line-height: 1.4;
+}
+
+.work {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 0;
+    scroll-margin-top: 88px;
+}
+
+.work-title {
+    margin: 0 0 30px;
+    text-align: center;
+    font-family: Georgia, serif;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.project-grid {
+    display: grid;
+    width: min(1400px, 90%);
+    grid-template-columns: repeat(3, 30%);
+    gap: 2rem;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.project {
+    display: block;
+    min-width: 0;
+    padding: 0;
+    border: 0;
+    color: inherit;
+    background: transparent;
+    text-align: left;
+    font: inherit;
+    cursor: pointer;
+}
+
+.project img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: filter .35s ease, transform .35s ease;
+}
+
+.project:hover img {
+    filter: brightness(.82);
+    transform: scale(.99);
+}
+
+.project:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 6px;
+}
+
+.project-caption {
+    display: block;
+    margin-top: 16px;
+    color: #aaa;
+    font-size: 12px;
+    letter-spacing: .12em;
+}
+
+.contact {
+    display: grid;
+    width: min(1200px, calc(100% - 80px));
+    align-items: center;
+    grid-template-columns: 1fr minmax(280px, 420px);
+    gap: clamp(40px, 8vw, 120px);
+    margin: 0 auto;
+    padding: clamp(72px, 9vw, 120px) 0;
+    border-top: 1px solid #333;
+    scroll-margin-top: 88px;
+}
+
+.contact-eyebrow {
+    margin: 0 0 20px;
+    color: #aaa;
+    font-size: 13px;
+    letter-spacing: .14em;
+}
+
+.contact-copy h2 {
+    max-width: 520px;
+    margin: 0;
+    font-size: clamp(30px, 4vw, 48px);
+    font-weight: 400;
+    line-height: 1.35;
+    word-break: keep-all;
+}
+
+.contact-details {
+    display: grid;
+    gap: 14px;
+}
+
+.contact-email {
+    margin-bottom: 12px;
+    color: #ccc;
+    font-family: Georgia, serif;
+    font-size: 20px;
+}
+
+.contact-link {
+    display: flex;
+    min-height: 46px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #d9d9d9;
+    color: #111;
+    background: #f2f2f2;
+    font-size: 11px;
+    letter-spacing: .08em;
+    transition: color .2s ease, background .2s ease;
+}
+
+.contact-link:hover {
+    color: #fff;
+    background: #333;
+}
+
+.footer {
+    display: flex;
+    width: min(1200px, calc(100% - 80px));
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 22px 0 30px;
+    border-top: 1px solid #222;
+    color: #777;
+    font-size: 11px;
+    letter-spacing: .08em;
+}
+
+.footer a {
+    color: #aaa;
+}
+
+.project-modal {
+    width: fit-content;
+    max-width: min(1000px, calc(100vw - 40px));
+    max-height: min(90vh, 1000px);
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    border: 1px solid #333;
+    border-radius: 14px;
+    color: #f5f5f5;
+    background: #090909;
+}
+
+.project-modal::backdrop {
+    background: rgb(0 0 0 / 82%);
+    backdrop-filter: blur(5px);
+}
+
+.project-modal-header {
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    display: flex;
+    min-height: 64px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    border-bottom: 1px solid #333;
+    background: rgb(9 9 9 / 94%);
+}
+
+.project-modal-header h2 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .12em;
+}
+
+.project-modal-close {
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    border: 1px solid #666;
+    color: #fff;
+    background: transparent;
+    font: inherit;
+    font-size: 26px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.project-modal-close:hover {
+    color: #111;
+    background: #fff;
+}
+
+.project-modal-image {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+@media (max-width: 800px) {
+    .hero {
+        min-height: 580px;
+        height: 88svh;
+    }
+
+    .header {
+        padding: 14px 20px;
+    }
+
+    .logo img {
+        width: 150px;
+    }
+
+    .nav {
+        gap: 16px;
+    }
+
+    .nav a {
+        font-size: 13px;
+    }
+
+    .hero-title {
+        margin: 0 0 12% 7%;
+        font-size: clamp(72px, 14vw, 108px);
+    }
+
+    .about-inner {
+        width: calc(100% - 48px);
+        grid-template-columns: minmax(0, 1fr);
+        gap: 40px;
+    }
+
+    .about-profile {
+        width: min(100%, 420px);
+    }
+
+    .skill-item {
+        grid-template-columns: 34px minmax(100px, 180px) minmax(0, 1fr);
+        gap: 12px;
+    }
+
+    .project-grid {
+        width: calc(100% - 48px);
+        grid-template-columns: minmax(0, 1fr);
+        gap: 2rem;
+        padding: 1rem 0;
+    }
+
+    .contact {
+        width: calc(100% - 48px);
+        grid-template-columns: minmax(0, 1fr);
+        gap: 36px;
+    }
+
+    .footer {
+        width: calc(100% - 48px);
+    }
+}
+
+@media (max-width: 520px) {
+    .header {
+        align-items: flex-start;
+    }
+
+    .logo img {
+        width: 120px;
+    }
+
+    .nav {
+        gap: 12px;
+    }
+
+    .nav a {
+        font-size: 11px;
+    }
+
+    .project-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .skill-item {
+        grid-template-columns: 32px minmax(0, 1fr);
+    }
+
+    .skill-track {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .skill-name {
+        grid-column: 2;
+        grid-row: 1;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+    }
+}
+>>>>>>> 31ddcf7e9368338d87f6ec6b71cb3a8ba117e500
