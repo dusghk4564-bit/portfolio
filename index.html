@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/1a666660e4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <a class="logo" href="#top" aria-label="Portfolio 홈으로">
+            <img src="./img/honghyominlogo.png" alt="honghyomin" width="150" height="32">
+        </a>
+        <nav class="nav" aria-label="메인 메뉴">
+            <a href="#about">About</a>
+            <a href="#work">Project</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <main class="portfolio">
+        <section class="hero" id="top">
+            <img class="hero-image" src="./img/img1.jpg" alt="">
+            <h1 class="hero-title">Port-<span>Folio</span></h1>
+        </section>
+
+        <section class="about" id="about" aria-label="소개">
+            <div class="about-inner">
+                <div class="about-profile">
+                    <img class="about-photo" src="./img/honghyominlogo.png" alt="홍효민 로고">
+                    <p class="profile-caption"><strong>홍효민</strong><span>2001. 11. 27</span></p>
+                </div>
+                <div class="about-copy">
+                    <section class="experience" aria-labelledby="experience-title">
+                        <h2 class="about-title" id="experience-title">EXPERIENCE</h2>
+                        <ul class="experience-list">
+                            <li>영남이공대학교 졸업 [졸업]</li>
+                            <li>영진직업전문학교 웹 디자인 · UI/UX · 그래픽 디자인 [수료]</li>
+                        </ul>
+                    </section>
+                    <section class="skill-section" aria-labelledby="skills-title">
+                        <h2 class="about-title" id="skills-title">SKILL</h2>
+                        <ul class="skills" aria-label="디자인 도구 숙련도">
+                            <li class="skill-item" aria-label="Photoshop 숙련도 90%">
+                                <img class="skill-icon" src="./img/icon1.png" alt="" aria-hidden="true">
+                                <span class="skill-track"><span class="skill-level" style="--skill-level: 90%"></span></span>
+                                <span class="skill-name">Photoshop</span>
+                            </li>
+                            <li class="skill-item" aria-label="Illustrator 숙련도 90%">
+                                <img class="skill-icon" src="./img/icon2.png" alt="" aria-hidden="true">
+                                <span class="skill-track"><span class="skill-level" style="--skill-level: 90%"></span></span>
+                                <span class="skill-name">Illustrator</span>
+                            </li>
+                            <li class="skill-item" aria-label="Premiere Pro 숙련도 50%">
+                                <img class="skill-icon" src="./img/icon3.png" alt="" aria-hidden="true">
+                                <span class="skill-track"><span class="skill-level" style="--skill-level: 65%"></span></span>
+                                <span class="skill-name">Premiere Pro</span>
+                            </li>
+                            <li class="skill-item" aria-label="After Effects 숙련도 50%">
+                                <img class="skill-icon" src="./img/icon4.png" alt="" aria-hidden="true">
+                                <span class="skill-track"><span class="skill-level" style="--skill-level: 70%"></span></span>
+                                <span class="skill-name">After Effects</span>
+                            </li>
+                            <li class="skill-item" aria-label="InDesign 숙련도 50%">
+                                <img class="skill-icon" src="./img/icon5.png" alt="" aria-hidden="true">
+                                <span class="skill-track"><span class="skill-level" style="--skill-level: 50%"></span></span>
+                                <span class="skill-name">InDesign</span>
+                            </li>
+                            <li class="skill-item" aria-label="Figma 숙련도 50%">
+                                <img class="skill-icon" src="./img/icon6.png" alt="" aria-hidden="true">
+                                <span class="skill-track"><span class="skill-level" style="--skill-level: 75%"></span></span>
+                                <span class="skill-name">Figma</span>
+                            </li>
+                            <li class="skill-item" aria-label="HTML 숙련도 35%">
+                                <img class="skill-icon" src="./img/icon7.png" alt="" aria-hidden="true">
+                                <span class="skill-track"><span class="skill-level" style="--skill-level: 35%"></span></span>
+                                <span class="skill-name">HTML</span>
+                            </li>
+                            <li class="skill-item" aria-label="CSS 숙련도 35%">
+                                <img class="skill-icon" src="./img/icon8.png" alt="" aria-hidden="true">
+                                <span class="skill-track"><span class="skill-level" style="--skill-level: 35%"></span></span>
+                                <span class="skill-name">CSS</span>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <section class="work" id="work" aria-labelledby="work-title">
+            <h2 class="work-title" id="work-title">Project</h2>
+            <div class="project-category" aria-label="Product Detail Page">
+                <div class="project-grid">
+                    <div class="project-popup-item" aria-labelledby="popup-title-01">
+                        <h3 class="project-category-title" id="popup-title-01">Product Detail Page</h3>
+                        <button class="project project-popup project-with-image" type="button" data-project-title="Product Detail Page" data-project-image="./img/pdp1.jpg">
+                            <img class="project-popup-image" src="./img/pdpimg_0.png" alt="Product Detail Page">
+                        </button>
+                    </div>
+                    <div class="project-popup-item" aria-labelledby="popup-title-02">
+                        <h3 class="project-category-title" id="popup-title-02">Logo</h3>
+                        <button class="project project-popup project-with-image" type="button" data-project-title="Modal Popup 02" data-project-image="./img/logo1.jpg">
+                            <img class="project-popup-image" src="./img/logo.jpg" alt="티어런트 로고 프로젝트">
+                        </button>
+                    </div>
+                    <div class="project-popup-item" aria-labelledby="popup-title-03">
+                        <h3 class="project-category-title" id="popup-title-03">Card news</h3>
+                        <button class="project project-popup project-with-image" type="button" data-project-title="Dove Detail Page" data-project-image="./img/cardnews.jpg">
+                            <img class="project-popup-image" src="./img/cardnews1.png" alt="카드뉴스 디자인 목업">
+                        </button>
+                    </div>
+                    <div class="project-popup-item" aria-labelledby="popup-title-04">
+                        <h3 class="project-category-title" id="popup-title-04">Teatreat Logo</h3>
+                        <button class="project project-popup project-with-image" type="button" data-project-title="Teatreat Logo" data-project-image="./img/logo1.jpg">
+                            <img class="project-popup-image" src="./img/logo1.jpg" alt="티어런트 로고 디자인 상세 이미지">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="project-category" aria-labelledby="redesign-title">
+                <h3 class="project-category-title" id="redesign-title">Web Redesign <span>02</span></h3>
+                <div class="project-grid">
+                    <button class="project project-with-image" type="button" data-project-type="redesign" data-project-title="대구아쿠아리움" data-project-image="./img/wed1.png" data-project-description="대구 아쿠아리움의 리디자인입니다." data-project-role="기획, 디자인, 퍼블리싱 100%" data-project-period="2026.08.26-09.01" data-project-tools="Photoshop,Figma,HTML,CSS">
+                        <img class="project-thumbnail" src="./img/wed1.png" alt="대구아쿠아리움 웹 리디자인 시안">
+                        <span class="project-caption">대구 아쿠아리움 웹 리디자인</span>
+                    </button>
+                    <button class="project project-with-image" type="button" data-project-type="redesign" data-project-title="시드물 웹 홈페이지 리디자인" data-project-image="./img/web2.png" data-project-description="시드물 브랜드 홈페이지 리디자인입니다." data-project-role="기획, 디자인, 퍼블리싱 100%" data-project-tools="Photoshop,Figma,HTML,CSS">
+                        <img class="project-thumbnail" src="./img/web2.png" alt="시드물 웹 홈페이지 리디자인">
+                        <span class="project-caption">시드물 웹 리디자인</span>
+                    </button>
+                </div>
+            </div>
+            <div class="project-category" aria-labelledby="sns-title">
+                <div class="project-category-heading">
+                    <h3 class="project-category-title" id="sns-title">SNS Banner <span>04</span></h3>
+                    <div class="sns-controls">
+                        <button class="sns-control" type="button" data-carousel-direction="-1" aria-label="이전 배너">←</button>
+                        <button class="sns-control sns-play-toggle" type="button" aria-label="자동 이동 일시정지" aria-pressed="false">Ⅱ</button>
+                        <button class="sns-control" type="button" data-carousel-direction="1" aria-label="다음 배너">→</button>
+                    </div>
+                </div>
+                <div class="sns-carousel" data-carousel aria-roledescription="carousel" aria-label="SNS 배너">
+                    <div class="sns-viewport">
+                        <div class="sns-track">
+                            <article class="project sns-project" aria-label="SNS 배너 01">
+                                <img class="project-thumbnail" src="./img/sns1.png" alt="카페 봄봄 수박 배너 - 수박 한 잔으로 여름 ON">
+                                <span class="project-caption">SNS BANNER 01</span>
+                            </article>
+                            <article class="project sns-project" aria-label="SNS 배너 02">
+                                <img class="project-thumbnail" src="./img/sns2.png" alt="카페 봄봄 수박 배너 - 오늘도 수박 할래?">
+                                <span class="project-caption">SNS BANNER 02</span>
+                            </article>
+                            <article class="project sns-project" aria-label="SNS 배너 03">
+                                <img class="project-thumbnail" src="./img/sns3.png" alt="카페 봄봄 수박 배너 - 한 모금에 여름 충전">
+                                <span class="project-caption">SNS BANNER 03</span>
+                            </article>
+                            <article class="project sns-project" aria-label="SNS 배너 04">
+                                <img class="project-thumbnail" src="./img/sns4.png" alt="카페 봄봄 수박 배너 - 더위 탈출, 수박 한 잔">
+                                <span class="project-caption">SNS BANNER 04</span>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact" aria-labelledby="contact-title">
+            <div class="contact-copy">
+                <p class="contact-eyebrow">CONTACT</p>
+                <h2 id="contact-title">함께 작업 이야기를 나눠요.</h2>
+            </div>
+            <div class="contact-details">
+                <a class="contact-email" href="tel:01045643524">010.4564.3524</a>
+                <a class="contact-link" href="mailto:hello@example.com">E-MAIL HERE</a>
+                <a class="contact-link" href="https://www.instagram.com/" target="_blank" rel="noreferrer">INSTAGRAM</a>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <a href="#top">HONG HYO MIN</a>
+        <span>© 2026 Portfolio</span>
+    </footer>
+    <dialog class="project-modal" id="project-modal" aria-labelledby="project-modal-title">
+        <button class="project-modal-close" type="button" aria-label="상세 보기 닫기"><i class="fa-solid fa-xmark"></i></button>
+        <div class="project-modal-header">
+            <h2 id="project-modal-title"></h2>
+        </div>
+        <div class="project-modal-main">
+            <div class="project-modal-gallery" id="project-modal-gallery">
+                <button class="project-modal-slide-control" type="button" data-slide-direction="-1" aria-label="이전 프로젝트">←</button>
+                <img class="project-modal-image" id="project-modal-image" src="" alt="">
+                <button class="project-modal-slide-control" type="button" data-slide-direction="1" aria-label="다음 프로젝트">→</button>
+            </div>
+            <section class="project-modal-details" id="project-modal-details" aria-labelledby="project-modal-detail-title" hidden>
+                <h2 id="project-modal-detail-title"></h2>
+                <p class="project-modal-description" id="project-modal-description"></p>
+                <dl class="project-modal-meta">
+                    <div class="project-modal-meta-item" id="project-modal-role-item" hidden>
+                        <dt>참여도</dt>
+                        <dd id="project-modal-role"></dd>
+                    </div>
+                    <div class="project-modal-meta-item" id="project-modal-period-item" hidden>
+                        <dt>기간</dt>
+                        <dd id="project-modal-period"></dd>
+                    </div>
+                </dl>
+                <div class="project-modal-tools-section" id="project-modal-tools-section" hidden>
+                    <h3>사용 프로그램</h3>
+                    <ul class="project-modal-tools" id="project-modal-tools"></ul>
+                </div>
+            </section>
+        </div>
+        <div class="project-modal-actions" id="project-modal-actions" hidden>
+            <a class="project-modal-action" data-project-action="web" aria-disabled="true">GO WEB</a>
+            <a class="project-modal-action" data-project-action="process" aria-disabled="true">PROCESS</a>
+            <a class="project-modal-action" data-project-action="figma" aria-disabled="true">FIGMA</a>
+        </div>
+    </dialog>
+    <script src="./js/portfolio.js"></script>
+</body>
+</html>
