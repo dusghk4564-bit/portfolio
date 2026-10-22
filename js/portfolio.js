@@ -3,32 +3,15 @@ const projectModalTitle = document.getElementById("project-modal-title");
 const projectModalImage = document.getElementById("project-modal-image");
 const projectModalGallery = document.getElementById("project-modal-gallery");
 const projectModalSlideControls = [...projectModalGallery.querySelectorAll("[data-slide-direction]")];
-const projectModalDetails = document.getElementById("project-modal-details");
-const projectModalDetailTitle = document.getElementById("project-modal-detail-title");
-const projectModalDescription = document.getElementById("project-modal-description");
-const projectModalRoleItem = document.getElementById("project-modal-role-item");
-const projectModalRole = document.getElementById("project-modal-role");
-const projectModalPeriodItem = document.getElementById("project-modal-period-item");
-const projectModalPeriod = document.getElementById("project-modal-period");
-const projectModalToolsSection = document.getElementById("project-modal-tools-section");
-const projectModalTools = document.getElementById("project-modal-tools");
-const projectModalActions = document.getElementById("project-modal-actions");
 const projectModalClose = projectModal.querySelector(".project-modal-close");
+const projectDetailModal = document.getElementById("project-detail-modal");
+const projectDetailModalTitle = document.getElementById("project-detail-modal-title");
+const projectDetailModalImage = document.getElementById("project-detail-modal-image");
+const projectDetailModalClose = projectDetailModal.querySelector(".project-detail-modal-close");
+
 let previousBodyOverflow = "";
 let currentSlides = [];
 let currentSlideIndex = -1;
-
-const projectToolAssets = {
-    Photoshop: "./img/icon1.png",
-    Figma: "./img/icon6.png",
-    HTML: "./img/icon7.png",
-    CSS: "./img/icon8.png"
-};
-
-const setModalField = (value, item, output) => {
-    output.textContent = value || "";
-    item.hidden = !value;
-};
 
 const showProjectSlide = (index, direction) => {
     currentSlideIndex = (index + currentSlides.length) % currentSlides.length;
@@ -41,14 +24,12 @@ const showProjectSlide = (index, direction) => {
 document.querySelectorAll("[data-project-image]").forEach((project) => {
     project.addEventListener("click", () => {
         const thumbnail = project.querySelector("img");
-        const isRedesign = project.dataset.projectType === "redesign";
         const title = project.dataset.projectTitle;
         currentSlides = project.dataset.projectSlides
             ? project.dataset.projectSlides.split("|").filter(Boolean)
             : [];
         currentSlideIndex = currentSlides.length ? currentSlides.indexOf(project.dataset.projectImage) : -1;
         projectModalTitle.textContent = title;
-        projectModalDetailTitle.textContent = title;
         projectModalImage.src = project.dataset.projectImage;
         projectModalImage.alt = thumbnail ? thumbnail.alt : title;
         if (currentSlideIndex >= 0) {
@@ -57,47 +38,41 @@ document.querySelectorAll("[data-project-image]").forEach((project) => {
         projectModalSlideControls.forEach((control) => {
             control.hidden = currentSlides.length < 2;
         });
-        projectModal.classList.toggle("project-modal--redesign", isRedesign);
-        projectModalDetails.hidden = !isRedesign;
-        projectModalActions.hidden = !isRedesign;
-        projectModal.setAttribute("aria-labelledby", isRedesign ? "project-modal-detail-title" : "project-modal-title");
-
-        if (isRedesign) {
-            projectModalDescription.textContent = project.dataset.projectDescription || "";
-            setModalField(project.dataset.projectRole, projectModalRoleItem, projectModalRole);
-            setModalField(project.dataset.projectPeriod, projectModalPeriodItem, projectModalPeriod);
-
-            const tools = (project.dataset.projectTools || "")
-                .split(",")
-                .map((tool) => tool.trim())
-                .filter((tool) => Object.hasOwn(projectToolAssets, tool));
-            projectModalTools.replaceChildren(...tools.map((tool) => {
-                const item = document.createElement("li");
-                const icon = document.createElement("img");
-                icon.src = projectToolAssets[tool];
-                icon.alt = tool;
-                item.append(icon);
-                return item;
-            }));
-            projectModalToolsSection.hidden = tools.length === 0;
-
-            projectModalActions.querySelectorAll("[data-project-action]").forEach((action) => {
-                const url = project.dataset[`project${action.dataset.projectAction[0].toUpperCase()}${action.dataset.projectAction.slice(1)}`];
-                if (url) {
-                    action.href = url;
-                    action.removeAttribute("aria-disabled");
-                } else {
-                    action.removeAttribute("href");
-                    action.setAttribute("aria-disabled", "true");
-                }
-            });
-        }
 
         previousBodyOverflow = document.body.style.overflow;
         projectModal.showModal();
-        document.body.style.overflow = "hidden";
+        document.body.style.overflow = "auto";
         projectModalClose.focus();
     });
+});
+
+
+document.querySelectorAll("[data-web-process]").forEach((button) => {
+    button.addEventListener("click", () => {
+        const { webImage, webTitle } = button.dataset;
+
+        // 모달 제목과 이미지 설정
+        projectDetailModalTitle.textContent = webTitle;
+        projectDetailModalImage.src = webImage;
+        projectDetailModalImage.alt = `${webTitle} 상세페이지`;
+
+        // 모달을 열기 전 현재 스크롤 위치 저장
+        scrollPosition = window.scrollY;
+
+        // 상세페이지 모달 열기
+        projectDetailModal.showModal();
+        projectDetailModalClose.focus();
+    });
+});
+
+projectDetailModal.addEventListener("close", () => {
+    // 모달을 닫으면 원래 페이지 위치로 복귀
+    window.scrollTo(0, scrollPosition);
+});
+
+
+projectDetailModalClose.addEventListener("click", () => {
+    projectDetailModal.close();
 });
 
 projectModalSlideControls.forEach((control) => {
@@ -253,3 +228,6 @@ if (carousel) {
     moveCarousel(position);
     startCarousel();
 }
+
+let scrollPosition = 0;
+

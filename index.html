@@ -22,15 +22,15 @@
     </header>
     <main class="portfolio">
         <section class="hero" id="top">
-            <img class="hero-image" src="./img/img1.jpg" alt="">
-            <h1 class="hero-title">Port-<span>Folio</span></h1>
+            <img class="hero-image" src="./img/img1.jpg.png" alt="백조">
         </section>
 
         <section class="about" id="about" aria-label="소개">
             <div class="about-inner">
                 <div class="about-profile">
-                    <img class="about-photo" src="./img/honghyominlogo.png" alt="홍효민 로고">
+                    <img class="about-photo" src="./img/hong.jpg" alt="홍효민 로고">
                     <p class="profile-caption"><strong>홍효민</strong><span>2001. 11. 27</span></p>
+                    <p><a href="img/cardnews1.png">이력서 보러가기</a></p>
                 </div>
                 <div class="about-copy">
                     <section class="experience" aria-labelledby="experience-title">
@@ -101,20 +101,20 @@
                     </div>
                     <div class="project-popup-item" aria-labelledby="popup-title-02">
                         <h3 class="project-category-title" id="popup-title-02">Logo</h3>
-                        <button class="project project-popup project-with-image" type="button" data-project-title="Modal Popup 02" data-project-image="./img/logo1.jpg">
+                        <button class="project project-popup project-with-image" type="button" data-project-title="Logo" data-project-image="./img/logo1.jpg">
                             <img class="project-popup-image" src="./img/logo.jpg" alt="티어런트 로고 프로젝트">
                         </button>
                     </div>
                     <div class="project-popup-item" aria-labelledby="popup-title-03">
                         <h3 class="project-category-title" id="popup-title-03">Card news</h3>
-                        <button class="project project-popup project-with-image" type="button" data-project-title="Dove Detail Page" data-project-image="./img/cardnews.jpg">
+                        <button class="project project-popup project-with-image" type="button" data-project-title="Card news" data-project-image="./img/cardnews.jpg">
                             <img class="project-popup-image" src="./img/cardnews1.png" alt="카드뉴스 디자인 목업">
                         </button>
                     </div>
                     <div class="project-popup-item" aria-labelledby="popup-title-04">
-                        <h3 class="project-category-title" id="popup-title-04">Teatreat Logo</h3>
-                        <button class="project project-popup project-with-image" type="button" data-project-title="Teatreat Logo" data-project-image="./img/logo1.jpg">
-                            <img class="project-popup-image" src="./img/logo1.jpg" alt="티어런트 로고 디자인 상세 이미지">
+                        <h3 class="project-category-title" id="popup-title-04">Mobile Redesign</h3>
+                        <button class="project project-popup project-with-image" type="button" data-project-title="Mobile Redesign" data-project-image="./img/t1.jpg">
+                            <img class="project-popup-image" src="./img/t.jpg" alt="아고다리디자인">
                         </button>
                     </div>
                 </div>
@@ -122,14 +122,24 @@
             <div class="project-category" aria-labelledby="redesign-title">
                 <h3 class="project-category-title" id="redesign-title">Web Redesign <span>02</span></h3>
                 <div class="project-grid">
-                    <button class="project project-with-image" type="button" data-project-type="redesign" data-project-title="대구아쿠아리움" data-project-image="./img/wed1.png" data-project-description="대구 아쿠아리움의 리디자인입니다." data-project-role="기획, 디자인, 퍼블리싱 100%" data-project-period="2026.08.26-09.01" data-project-tools="Photoshop,Figma,HTML,CSS">
+                    <article class="web-project">
                         <img class="project-thumbnail" src="./img/wed1.png" alt="대구아쿠아리움 웹 리디자인 시안">
                         <span class="project-caption">대구 아쿠아리움 웹 리디자인</span>
-                    </button>
-                    <button class="project project-with-image" type="button" data-project-type="redesign" data-project-title="시드물 웹 홈페이지 리디자인" data-project-image="./img/web2.png" data-project-description="시드물 브랜드 홈페이지 리디자인입니다." data-project-role="기획, 디자인, 퍼블리싱 100%" data-project-tools="Photoshop,Figma,HTML,CSS">
+                        <div class="web-project-actions">
+                            <a class="project-modal-action" href="./daegu_aquarium/index.html"target="_blank"
+                            rel="noopener noreferrer">웹사이트 바로가기</a>
+                            <button class="project-modal-action" type="button" data-web-process data-web-title="대구아쿠아리움" data-web-image="./img/wed1.png">상세페이지</button>
+                        </div>
+                    </article>
+                    <article class="web-project">
                         <img class="project-thumbnail" src="./img/web2.png" alt="시드물 웹 홈페이지 리디자인">
                         <span class="project-caption">시드물 웹 리디자인</span>
-                    </button>
+                        <div class="web-project-actions">
+                            <a class="project-modal-action" href="./sidmool/index.html"target="_blank"
+                            rel="noopener noreferrer">웹페이지 바로가기</a>
+                            <button class="project-modal-action" type="button" data-web-process data-web-title="시드물 웹 홈페이지 리디자인" data-web-image="./img/web2.png">상세페이지</button>
+                        </div>
+                    </article>
                 </div>
             </div>
             <div class="project-category" aria-labelledby="sns-title">
@@ -169,12 +179,11 @@
         <section class="contact" id="contact" aria-labelledby="contact-title">
             <div class="contact-copy">
                 <p class="contact-eyebrow">CONTACT</p>
-                <h2 id="contact-title">함께 작업 이야기를 나눠요.</h2>
+                <h2 id="contact-title">Thank you for Watching</h2>
             </div>
             <div class="contact-details">
                 <a class="contact-email" href="tel:01045643524">010.4564.3524</a>
-                <a class="contact-link" href="mailto:hello@example.com">E-MAIL HERE</a>
-                <a class="contact-link" href="https://www.instagram.com/" target="_blank" rel="noreferrer">INSTAGRAM</a>
+                <a class="contact-link" href="mailto:hello@example.com">gyals3524@naver.com</a>
             </div>
         </section>
     </main>
@@ -190,33 +199,15 @@
         <div class="project-modal-main">
             <div class="project-modal-gallery" id="project-modal-gallery">
                 <button class="project-modal-slide-control" type="button" data-slide-direction="-1" aria-label="이전 프로젝트">←</button>
-                <img class="project-modal-image" id="project-modal-image" src="" alt="">
+                <img class="project-modal-image" id="project-modal-image" src="./img/web.jpg" alt="">
                 <button class="project-modal-slide-control" type="button" data-slide-direction="1" aria-label="다음 프로젝트">→</button>
             </div>
-            <section class="project-modal-details" id="project-modal-details" aria-labelledby="project-modal-detail-title" hidden>
-                <h2 id="project-modal-detail-title"></h2>
-                <p class="project-modal-description" id="project-modal-description"></p>
-                <dl class="project-modal-meta">
-                    <div class="project-modal-meta-item" id="project-modal-role-item" hidden>
-                        <dt>참여도</dt>
-                        <dd id="project-modal-role"></dd>
-                    </div>
-                    <div class="project-modal-meta-item" id="project-modal-period-item" hidden>
-                        <dt>기간</dt>
-                        <dd id="project-modal-period"></dd>
-                    </div>
-                </dl>
-                <div class="project-modal-tools-section" id="project-modal-tools-section" hidden>
-                    <h3>사용 프로그램</h3>
-                    <ul class="project-modal-tools" id="project-modal-tools"></ul>
-                </div>
-            </section>
         </div>
-        <div class="project-modal-actions" id="project-modal-actions" hidden>
-            <a class="project-modal-action" data-project-action="web" aria-disabled="true">GO WEB</a>
-            <a class="project-modal-action" data-project-action="process" aria-disabled="true">PROCESS</a>
-            <a class="project-modal-action" data-project-action="figma" aria-disabled="true">FIGMA</a>
-        </div>
+    </dialog>
+    <dialog class="project-detail-modal" id="project-detail-modal" aria-labelledby="project-detail-modal-title">
+        <button class="project-detail-modal-close" type="button" aria-label="상세페이지 팝업 닫기">×</button>
+        <h2 class="project-detail-modal-title" id="project-detail-modal-title"></h2>
+        <img class="project-detail-modal-image" id="project-detail-modal-image" src="./img/web.jpg" alt="">
     </dialog>
     <script src="./js/portfolio.js"></script>
 </body>

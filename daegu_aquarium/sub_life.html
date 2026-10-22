@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>생물 안내 | 대구아쿠아리움</title>
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/life.css">
+</head>
+<body class="life-page">
+    <header class="sub-header">
+        <div class="page-width">
+            <div class="sub-header-top">
+                <div></div>
+                <div class="header-utilities">
+                    <a href="#">로그인</a><span>|</span><a href="#">ID/PW 찾기</a><span>|</span><a href="#">회원가입</a>
+                </div>
+            </div>
+            <div class="sub-header-main">
+                <a class="sub-logo" href="index.html"><img src="./img/logo1.png" alt="대구아쿠아리움"></a>
+                <nav class="sub-nav" aria-label="주요 메뉴">
+                    <a class="active" href="sub_life.html">생물 안내<img src="./img/icon.png" alt=""></a>
+                    <a href="index.html#programs">프로그램<img src="./img/icon.png" alt=""></a>
+                    <a href="index.html#events">이벤트<img src="./img/icon.png" alt=""></a>
+                    <a href="index.html#guide">방문 안내<img src="./img/icon.png" alt=""></a>
+                </nav>
+                <a class="sub-search" href="#" aria-label="검색">⌕</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="sub-hero">
+            <div class="page-width sub-hero-inner">
+                <p class="breadcrumb"><a href="index.html">AQUA WORLD</a><span>/</span>생물 안내</p>
+                <div class="section-label"><i></i>Marine Life</div>
+                <h1>오늘 만나는 바다의<br><em>가장 가까운 순간</em></h1>
+                <p class="sub-hero-copy">아쿠아월드에서 함께 살아가는 생물들의 이야기를<br>서식지와 특징으로 천천히 살펴보세요.</p>
+            </div>
+            <div class="hero-watermark">MARINE<br>LIFE</div>
+        </section>
+
+        <section class="life-content section">
+            <div class="page-width">
+                <div class="content-intro">
+                    <div>
+                        <div class="section-label"><i></i>Explore the ocean</div>
+                        <h2>아쿠아월드 생물 도감</h2>
+                    </div>
+                    <p>수조관에서 만날 수 있는 대표 생물들을<br>테마별로 찾아보세요.</p>
+                </div>
+                <div class="life-tabs" role="tablist" aria-label="생물 종류 필터">
+                    <button class="life-tab active" type="button" data-filter="all">전체 보기 <span>09</span></button>
+                    <button class="life-tab" type="button" data-filter="ocean">오션 라이프 <span>03</span></button>
+                    <button class="life-tab" type="button" data-filter="tropical">열대 바다 <span>03</span></button>
+                    <button class="life-tab" type="button" data-filter="special">스페셜 생물 <span>03</span></button>
+                </div>
+
+                <article class="featured-life" id="featured-life" aria-live="polite">
+                    <div class="featured-image-wrap">
+                        <img id="featured-image" src="./img/img1.png" alt="흑기흉상어">
+                        <span class="featured-mark"></span>
+                    </div>
+                    <div class="featured-copy">
+                        <p class="featured-kicker" id="featured-category"></p>
+                        <h3 id="featured-name">흑기흉상어</h3>
+                        <p class="featured-scientific" id="featured-scientific">Carcharodon carcharias</p>
+                        <p class="featured-description" id="featured-description">푸른 바다를 유영하는 가장 완벽한 포식자. 넓은 심해 탐험관에서 유유히 움직이는 상어의 우아한 실루엣을 만나보세요.</p>
+                        <dl class="featured-facts">
+                            <div><dt>서식지</dt><dd id="featured-habitat">열대·온대 해역</dd></div>
+                            <div><dt>만나는 곳</dt><dd id="featured-location">심해 탐험관</dd></div>
+                            <div><dt>관람 포인트</dt><dd id="featured-point">느린 듯 강한 유영</dd></div>
+                        </dl>
+                        <a class="outline-button" href="index.html#guide">관람 안내 보기 <span>↗</span></a>
+                    </div>
+                </article>
+
+                <div class="archive-heading">
+                    <h2>생물 아카이브</h2>
+                    <span>09 creatures / 04 habitats</span>
+                </div>
+                <div class="creature-grid">
+                    <a
+                        class="creature-card active"
+                        href="#featured-life"
+                        aria-label="흰수염상어 상세 정보 보기"
+                        data-filter-card="ocean"
+                        data-name="흰수염상어"
+                        data-scientific="Carcharodon carcharias"
+                        data-image="img1.png"
+                        data-description="푸른 바다를 유영하는 가장 완벽한 포식자. 넓은 심해 탐험관에서 유유히 움직이는 상어의 우아한 실루엣을 만나보세요."
+                        data-habitat="열대·온대 해역"
+                        data-location="심해 탐험관"
+                        data-point="느린 듯 강한 유영"
+                    >
+                        <img src="./img/img1.png" alt="흑기흉상어">
+                        <strong>흑기흉상어</strong>
+                        <small>Carcharhinus melanopterus</small>
+                    </a>
+                    <a
+                        class="creature-card"
+                        href="#featured-life"
+                        aria-label="작은발톱수달"
+                        data-filter-card="ocean"
+                        data-name="작은발톱수달"
+                        data-scientific="Amblonyx cinerea"
+                        data-image="img2.png"
+                        data-description="작은 몸집으로 민첩하게 움직이는 수달. 터널 수조관에서 모래 위를 뛰어다니는 귀여운 모습을 관찰해보세요."
+                        data-habitat="민물과 바닷물이 만나는 하구"
+                        data-location="터널 수조관"
+                        data-point="민첩한 움직임"
+                    >
+                        <img src="./img/img2.png" alt="작은발톱수달">
+                        <strong>작은발톱수달</strong>
+                        <small>Amblonyx cinerea</small>
+                    </a>
+                    <a
+                        class="creature-card"
+                        href="#featured-life"
+                        aria-label="흰동가리 정보 보기"
+                        data-filter-card="tropical"
+                        data-name="흰동가리"
+                        data-scientific=" Amphiprion ocellaris"
+                        data-image="img3.png"
+                        data-description="작은 움직임이 모여 하나의 파도처럼 흐르는 열대어 군락. 산호초 사이에서 펼쳐지는 생생한 색의 리듬을 만나보세요."
+                        data-habitat="따뜻한 산호초 바다"
+                        data-location="산호초 생태관"
+                        data-point="군락의 움직임"
+                    >
+                        <img src="./img/img3.png" alt="흰동가리">
+                        <strong>흰동가리</strong>
+                        <small> Amphiprion ocellaris</small>
+                    </a>
+                    <a
+                        class="creature-card"
+                        href="#featured-life"
+                        aria-label="흑가오리 상세 정보 보기"
+                        data-filter-card="special"
+                        data-name="흑가오리"
+                        data-scientific="Dasyatis matsubarai"
+                        data-image="img4.jpg"
+                        data-description="빛을 머금은 듯 천천히 부유하는 흑가오리. 어두운 수조 안에서 완성되는 투명한 움직임을 가까이에서 느껴보세요."
+                        data-habitat="전 세계의 바다"
+                        data-location="빛과 함께 유영"
+                        data-point="빛과 함께 유영"
+                    >
+                        <img src="./img/img4.jpg" alt="흑가오리">
+                        <strong>흑가오리</strong>
+                        <small>Dasyatis matsubarai</small>
+                    </a>
+                    <a
+                        class="creature-card"
+                        href="#featured-life"
+                        aria-label="훔볼트펭귄 상세 정보 보기"
+                        data-filter-card="special"
+                        data-name="훔볼트펭귄"
+                        data-scientific="Spheniscus humboldti"
+                        data-image="img5.png"
+                        data-description="남미 해안에서 서식하는 펭귄. 수조 안에서 헤엄치는 모습과 육지에서 걷는 모습을 모두 관찰할 수 있습니다."
+                        data-habitat="열대·아열대 바다"
+                        data-location="대형 수조관"
+                        data-point="수영과 걷기 모두 가능한 펭귄"
+                    >
+                        <img src="./img/img5.png" alt="훔볼트펭귄">
+                        <strong>훔볼트펭귄</strong>
+                        <small>Spheniscus humboldti</small>
+                    </a>
+                    <a
+                        class="creature-card"
+                        href="#featured-life"
+                        aria-label="매너티 상세 정보 보기"
+                        data-filter-card="tropical"
+                        data-name="매너티"
+                        data-scientific="Trichechus senegalensis"
+                        data-image="img6.jpg"
+                        data-description="온순한 성격과 느린 움직임으로 '바다의 소'라고 불리는 해양 포유류. 수조 안에서 유유히 움직이는 모습을 관찰해보세요."
+                        data-habitat="열대·아열대 해역"
+                        data-location="오션 터널"
+                        data-point="느린 움직임과 온순한 성격"
+                    >
+                        <img src="./img/img6.jpg" alt="매너티">
+                        <strong>매너티</strong>
+                        <small>Trichechus senegalensis</small>
+                    </a>
+                    <a
+                        class="creature-card"
+                        href="#featured-life"
+                        aria-label="가든일 상세 정보 보기"
+                        data-filter-card="Heteroconger hassi"
+                        data-name="가든일"
+                        data-scientific="Heteroconger hassi"
+                        data-image="img14.png"
+                        data-description="산호초 사이를 오가며 말미잘과 공생하는 작은 물고기. 선명한 주황빛 무늬와 활발한 움직임을 관찰해보세요."
+                        data-habitat="인도·태평양 산호초"
+                        data-location="산호초 생태관"
+                        data-point="말미잘과의 공생"
+                    >
+                        <img src="./img/img14.png" alt="가든일">
+                        <strong>가든일</strong>
+                        <small>Heteroconger hassi</small>
+                    </a>
+                    <a
+                        class="creature-card"
+                        href="#featured-life"
+                        aria-label="아로나와 상세 정보 보기"
+                        data-filter-card="special"
+                        data-name="아로나와"
+                        data-scientific="Osteoglossum bicirrhosum"
+                        data-image="img15.png"
+                        data-description="아마존 강에서 서식하는 대형 민물고기. 꼬리로 매달리는 습성을 관찰하며 물속에서의 유연한 움직임을 느껴보세요."
+                        data-habitat="아마존 강"
+                        data-location="대형 민물 수조관"
+                        data-point="꼬리로 매달리는 습성"
+                    >
+                        <img src="./img/img15.png" alt="아로나와">
+                        <strong>아로나와</strong>
+                        <small>Osteoglossum bicirrhosum</small>
+                    </a>
+                    <a
+                        class="creature-card"
+                        href="#featured-life"
+                        aria-label="피라냐 상세 정보 보기"
+                        data-filter-card="ocean"
+                        data-name="피라냐"
+                        data-scientific="Pygocentrus nattereri"
+                        data-image="img16.png"
+                        data-description="아마존 강에서 서식하는 육식성 민물고기. 날카로운 이빨과 빠른 움직임으로 먹이를 사냥하는 모습을 관찰해보세요."
+                        data-habitat="아마존 강"
+                        data-location="대형 민물 수조관"
+                        data-point="날카로운 이빨과 빠른 움직임"
+                    >
+                        <img src="./img/img16.png" alt="피라냐">
+                        <strong>피라냐</strong>
+                        <small>Pygocentrus nattereri</small>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="sub-footer">
+        <div class="page-width footer-top">
+            <div><a class="logo" href="index.html">AQUA<span>WORLD</span></a><p>바다의 경이로움을<br>지금 경험하세요.</p></div>
+            <div class="footer-links"><div><b>아쿠아월드</b><a href="index.html">소개</a><a href="index.html#guide">이용 안내</a></div><div><b>고객 지원</b><a href="#">문의하기</a><a href="#">자주 묻는 질문</a></div><div><b>소셜</b><a href="#">Instagram</a><a href="#">Youtube</a></div></div>
+        </div>
+        <div class="page-width copyright">© 2026 AQUA WORLD. All rights reserved.</div>
+    </footer>
+    <script>
+        const tabs = document.querySelectorAll('.life-tab');
+        const cards = document.querySelectorAll('.creature-card');
+        const featuredImage = document.querySelector('#featured-image');
+        const featuredName = document.querySelector('#featured-name');
+        const featuredScientific = document.querySelector('#featured-scientific');
+        const featuredDescription = document.querySelector('#featured-description');
+        const featuredHabitat = document.querySelector('#featured-habitat');
+        const featuredLocation = document.querySelector('#featured-location');
+        const featuredPoint = document.querySelector('#featured-point');
+        const featuredCategory = document.querySelector('#featured-category');
+
+        function updateFeatured(card) {
+            featuredImage.src = './img/' + card.dataset.image;
+            featuredImage.alt = card.dataset.name;
+            featuredName.textContent = card.dataset.name;
+            featuredScientific.textContent = card.dataset.scientific;
+            featuredDescription.textContent = card.dataset.description;
+            featuredHabitat.textContent = card.dataset.habitat;
+            featuredLocation.textContent = card.dataset.location;
+            featuredPoint.textContent = card.dataset.point;
+            featuredCategory.textContent = card.querySelector('.creature-type').textContent + ' / ' + card.dataset.cardNumber;
+            cards.forEach(item => item.classList.toggle('active', item === card));
+        }
+
+        cards.forEach((card, index) => {
+            card.dataset.cardNumber = String(index + 1).padStart(2, '0');
+            card.addEventListener('click', event => {
+                event.preventDefault();
+                updateFeatured(card);
+            });
+        });
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const filter = tab.dataset.filter;
+                tabs.forEach(item => item.classList.toggle('active', item === tab));
+                cards.forEach(card => {
+                    card.hidden = filter !== 'all' && card.dataset.filterCard !== filter;
+                });
+                const firstVisible = [...cards].find(card => !card.hidden);
+                if (firstVisible) updateFeatured(firstVisible);
+            });
+        });
+    </script>
+</body>
+</html>
